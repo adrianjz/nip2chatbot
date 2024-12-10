@@ -22,7 +22,13 @@
  
  
  <category>
-     <pattern>My name is * *</pattern>
-     <template>Hello, <star index="1"/>. How are you, Mr. <star index="2"/></template>
+     <pattern>MY NAME IS * *</pattern>
+     <template>Hello, <set name="firstname"><star/></set>. How are you, Mr. <star index="2"/></template>
  </category>
+ 
+ <category>
+     <pattern>WHAT IS MY NAME</pattern>
+     <template>Your name is <get name="firstname"/></template>
+ </category>
+ 
 </aiml>
