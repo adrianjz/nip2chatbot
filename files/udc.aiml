@@ -61,4 +61,18 @@
      <template>Your name is <get name="firstname"/></template>
  </category>
  
+ <category>
+     <pattern>I ATE *</pattern>
+     <template>
+         That sounds yummy.
+         <think><set name="food"><star/></set></think>
+     </template>
+ </category>
+ 
+ <category>
+     <pattern>WHAT FOOD DO I LIKE</pattern>
+     <template>
+         Well, earlier you ate <get name="food"/>, so I assume you like that.
+     </template>
+ </category>
 </aiml>
