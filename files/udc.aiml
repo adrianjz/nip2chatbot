@@ -19,7 +19,21 @@
      <pattern>BONJOUR *</pattern>
      <template>Bonjour <star index="1"/></template>
  </category>
- 
+
+  <category>
+    <pattern>ROLL A DIE</pattern>
+    <template>
+      <random>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+      </random>
+  </template>
+ </category>
  
  <category>
      <pattern>MY NAME IS * *</pattern>
