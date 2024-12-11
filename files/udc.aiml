@@ -75,4 +75,25 @@
          Well, earlier you ate <get name="food"/>, so I assume you like that.
      </template>
  </category>
+ 
+ 
+ 
+ <category>
+     <pattern>ASK ME A QUESTION</pattern>
+     <template>
+         Do you like the beach?
+     </template>
+ </category>
+ 
+ <category>
+     <that>DO YOU LIKE *</that>
+     <pattern>YES</pattern>
+     <template>Interesting...  What do you like best about <thatstar/>?</template>
+ </category>
+ 
+ <category>
+     <that> _ LIKE THE BEACH</that>
+     <pattern>NO</pattern>
+     <template>Really?  But the sand and surf are awesome!</template>
+ </category>
 </aiml>
