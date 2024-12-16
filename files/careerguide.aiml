@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
+    
+    <!-- This category is the starting point of the chatbot. -->
+    <!-- There are five careers available for the chatbot to suggest. -->
+    <!-- 1: Software developer -->
+    <!-- 2: UX Designer -->
+    <!-- 3: Data Scientist -->
+    <!-- 4: Information Security Analyst -->
+    <!-- 5: IT Project Manager -->
+    <!-- A student will answer at most three questions before receiving a career. -->
 	<category>
 	    <pattern>CAREERS</pattern>
 	    <template>Welcome to the career guidance bot!<br></br>
 	    As a graduating computer science major, you are invited to take our career quiz!<br></br>
 	    Please answer these next questions to be matched with one of five potential careers.<br></br>
 	    <delay>2</delay>
+	    <!-- This is one of four questions asked by the chatbot -->
+	    <!-- At this point, all five careers are available -->
 	    Question 1: Do you enjoy coding?
 	    <reply>
 	        <text>Yes</text>
@@ -20,9 +31,24 @@
 	
 	<category>
 	    <pattern>I LOVE CODING</pattern>
-	    <template>Great!</template>
+	    <template>Great!<br></br>
+	    <!-- This is one of four questions asked by the chatbot -->
+	    <!-- At this point, careers 1 and 3 are available. -->
+	    Question 2: Do you enjoy analyzing large sets of data?
+	    <reply>
+	        <!-- An affirmative reply will lead to Data Scientist. -->
+	        <text>Yes</text>
+	        <postback>Data is my life!</postback>
+	    </reply>
+	    <reply>
+	        <!-- A negative reply will lead to Software Developer. -->
+	        <text>No</text>
+	        <postback>I deal with too much data already!</postback>
+	    </reply>
+	    </template>
 	</category>
 	
+	<!-- From here, non-coding careers 2,4,5 are available -->
 	<category>
 	    <pattern>CODING IS NOT REALLY MY THING</pattern>
 	    <template>Understandable and not a problem.</template>
