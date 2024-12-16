@@ -2,7 +2,7 @@
 <aiml>
   <category>
     <pattern>*</pattern>
-    <template>I have no answer for that.  <br></br>Type 'Careers' to begin the career guidance protocol.</template>
+    <template>Hello!  Type 'Careers' to begin the career guidance protocol.</template>
   </category>
     
   <category>
