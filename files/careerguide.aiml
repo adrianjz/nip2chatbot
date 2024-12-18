@@ -21,11 +21,11 @@
 	    Question 1: Do you enjoy coding?
 	    <reply>
 	        <text>Yes</text>
-	        <postback>I love coding!</postback>
+	        <postback>Yes</postback>
 	    </reply>
 	    <reply>
 	        <text>No</text>
-	        <postback>Coding is not really my thing</postback>
+	        <postback>No</postback>
 	    </reply>
 	    </template>
 	</category>
@@ -38,18 +38,17 @@
 	        Question 1: Do you enjoy coding?
 	        <reply>
 	        <text>Yes</text>
-	        <postback>I love coding!</postback>
+	        <postback>YES</postback>
 	    </reply>
 	    <reply>
 	        <text>No</text>
-	        <postback>Coding is not really my thing</postback>
+	        <postback>NO</postback>
 	    </reply>
 	    </template>
 	</category>
-	</topic>
 
 	<category>
-	    <pattern>I LOVE CODING</pattern>
+	    <pattern>YES</pattern>
 	    <template>Great!<br></br>
 	    <think><set name="topic">Q2</set></think>
 	    <!-- This is one of four questions asked by the chatbot -->
@@ -58,15 +57,25 @@
 	    <reply>
 	        <!-- An affirmative reply will lead to Data Scientist. -->
 	        <text>Yes</text>
-	        <postback>Data is my life!</postback>
+	        <postback>Yes</postback>
 	    </reply>
 	    <reply>
 	        <!-- A negative reply will lead to Software Developer. -->
 	        <text>No</text>
-	        <postback>I deal with too much data already!</postback>
+	        <postback>No</postback>
 	    </reply>
 	    </template>
 	</category>
+	
+		<!-- From here, non-coding careers 2,4,5 are available -->
+	<category>
+	    <pattern>NO</pattern>
+	    <template>Understandable and not a problem.
+	    <think><set name="topic">Q3</set></think>
+	    </template>
+	</category>
+	
+	</topic> <!-- End of Q1 topic -->
 	
 	<topic name="Q2">
 	<!-- This category is to keep the student in the flow of the logic of Q2-->
@@ -77,21 +86,29 @@
 	        <reply>
 	        <!-- An affirmative reply will lead to Data Scientist. -->
 	        <text>Yes</text>
-	        <postback>Data is my life!</postback>
+	        <postback>Yes</postback>
 	    </reply>
 	    <reply>
 	        <!-- A negative reply will lead to Software Developer. -->
 	        <text>No</text>
-	        <postback>I deal with too much data already!</postback>
+	        <postback>No</postback>
 	    </reply>
 	    </template>
 	</category>
-	</topic>
 	
-	<!-- From here, non-coding careers 2,4,5 are available -->
+	<!-- In this category, the person has just answered yes to enjoying data analysis -->
 	<category>
-	    <pattern>CODING IS NOT REALLY MY THING</pattern>
-	    <template>Understandable and not a problem.</template>
+	    <pattern>YES</pattern>
+	    <template>Astounding!
+	    <think><set name="topic">DataScientist</set></think>
+	    <br></br>
+	    Based on your answers, your ideal career is that of a Data Scientist!
+	    <image>https://www.wgu.edu/online-it-degrees/data-analytics-masters-program/_jcr_content/root/container/columncontrol/column-1/image_1704038250_cop.coreimg.85.800.png/1712173894152/msda-infographic.png</image>
+	    </template>
 	</category>
+	
+	</topic> <!-- End of Q2 topic -->
+	
+
 	
 </aiml>
