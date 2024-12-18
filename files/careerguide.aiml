@@ -12,6 +12,7 @@
 	<category>
 	    <pattern>CAREERS</pattern>
 	    <template>Welcome to the career guidance bot!<br></br>
+	    <think><set name="topic">Q1</set></think>
 	    As a graduating computer science major, you are invited to take our career quiz!<br></br>
 	    Please answer these next questions to be matched with one of five potential careers.<br></br>
 	    <delay>2</delay>
@@ -29,9 +30,28 @@
 	    </template>
 	</category>
 	
+	<topic name="Q1">
+	<!-- This category is to keep the student in the flow of the logic of Q1 -->
+	<category>
+	    <pattern>*</pattern>
+	    <template>
+	        Question 1: Do you enjoy coding?
+	        <reply>
+	        <text>Yes</text>
+	        <postback>I love coding!</postback>
+	    </reply>
+	    <reply>
+	        <text>No</text>
+	        <postback>Coding is not really my thing</postback>
+	    </reply>
+	    </template>
+	</category>
+	</topic>
+
 	<category>
 	    <pattern>I LOVE CODING</pattern>
 	    <template>Great!<br></br>
+	    <think><set name="topic">Q2</set></think>
 	    <!-- This is one of four questions asked by the chatbot -->
 	    <!-- At this point, careers 1 and 3 are available. -->
 	    Question 2: Do you enjoy analyzing large sets of data?
@@ -47,6 +67,26 @@
 	    </reply>
 	    </template>
 	</category>
+	
+	<topic name="Q2">
+	<!-- This category is to keep the student in the flow of the logic of Q2-->
+	<category>
+	    <pattern>*</pattern>
+	    <template>
+	        Question 2: Do you enjoy analyzing large sets of data?
+	        <reply>
+	        <!-- An affirmative reply will lead to Data Scientist. -->
+	        <text>Yes</text>
+	        <postback>Data is my life!</postback>
+	    </reply>
+	    <reply>
+	        <!-- A negative reply will lead to Software Developer. -->
+	        <text>No</text>
+	        <postback>I deal with too much data already!</postback>
+	    </reply>
+	    </template>
+	</category>
+	</topic>
 	
 	<!-- From here, non-coding careers 2,4,5 are available -->
 	<category>
