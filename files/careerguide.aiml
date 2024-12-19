@@ -256,7 +256,7 @@
 	    <template>That's alright.  We're on the right track!  Just a moment.
 	    <think><set name="topic">ITManager</set></think>
 	    <delay>3</delay>
-	    Baed on your answers, you would be a perfect fit for an IT Manager!
+	    Based on your answers, you would be a perfect fit for an IT Manager!
         <image>https://www.wgu.edu/blog/2019/10/6-it-management-roles-for-determined-professionals/_jcr_content/root/container/imageandtext.coreimg.85.800.jpeg/1571074070413/6-it-management-roles.jpeg</image>
 	    For more information on this career choice, please follow the link below:
 	    <link>
