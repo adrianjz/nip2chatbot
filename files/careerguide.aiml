@@ -53,6 +53,7 @@
 	    <think><set name="topic">Q2</set></think>
 	    <!-- This is one of four questions asked by the chatbot -->
 	    <!-- At this point, careers 1 and 3 are available. -->
+	    <delay>2</delay>
 	    Question 2: Do you enjoy analyzing large sets of data?
 	    <reply>
 	        <!-- An affirmative reply will lead to Data Scientist. -->
@@ -72,12 +73,24 @@
 	    <pattern>NO</pattern>
 	    <template>Understandable and not a problem.
 	    <think><set name="topic">Q3</set></think>
+	    <delay>2</delay>
+	    Question 2: Do you enjoy working with graphics and tinkering with the way things look?
+	    <reply>
+	        <!-- An affirmative reply will lead to UX Designer. -->
+	        <text>Yes</text>
+	        <postback>Yes</postback>
+	    </reply>
+	    <reply>
+	        <!-- A negative reply will lead to Q4 -->
+	        <text>No</text>
+	        <postback>No</postback>
+	    </reply>
 	    </template>
 	</category>
 	
 	</topic> <!-- End of Q1 topic -->
 	
-	<topic name="Q2">
+	<topic name="Q2"><!-- This topic is on working with data -->
 	<!-- This category is to keep the student in the flow of the logic of Q2-->
 	<category>
 	    <pattern>*</pattern>
@@ -102,13 +115,136 @@
 	    <template>Astounding!
 	    <think><set name="topic">DataScientist</set></think>
 	    <br></br>
+	    <delay>3</delay>
 	    Based on your answers, your ideal career is that of a Data Scientist!
 	    <image>https://www.wgu.edu/online-it-degrees/data-analytics-masters-program/_jcr_content/root/container/columncontrol/column-1/image_1704038250_cop.coreimg.85.800.png/1712173894152/msda-infographic.png</image>
+	    For more information on this career choice, please follow the link below:
+	    <link>
+	        <text>WGU Data Scientist</text>
+	        <url>https://www.wgu.edu/career-guide/information-technology/data-scientist-career.html</url>
+	    </link>
+	    <br></br>
+	    You can type 'Careers' again to retake this quiz.  Have a great day!
+	    <set name="topic"></set>
 	    </template>
 	</category>
 	
+	<!-- In this category, the person does not enjoy data analysis -->
+	<category>
+	    <pattern>NO</pattern>
+	    <template>No worries!
+	    <think><set name="topic">SoftwareDeveloper</set></think>
+	    <br></br>
+	    <delay>3</delay>
+	    Based on your answers, your ideal career is that of a Software Developer!
+	    <image>https://www.wgu.edu/blog/2019/05/key-differences-and-similarities-between-csharp-and-java/_jcr_content/root/container/imageandtext.coreimg.85.800.jpeg/1558386550315/java-vs-csharp.jpeg</image>
+	    For more information on this career choice, please follow the link below:
+	    <link>
+	        <text>WGU Software Development</text>
+	        <url>https://www.wgu.edu/blog/software-development-good-career2205.html</url>
+	    </link>
+	    <br></br>
+	    You can type 'Careers' again to retake this quiz.  Have a great day!
+	    <set name="topic"></set>
+	    </template>
+	</category>	
+	
 	</topic> <!-- End of Q2 topic -->
 	
+	<topic name="Q3"> <!-- This topic is on working with graphics-->
+	<!-- This category is to keep the student in the flow of the logic of Q3 -->
+	<category>
+	    <pattern>*</pattern>
+	    <template>
+	        Question 2: Do you enjoy working with graphics and tinkering with the way things look?
+	        <reply>
+	        <!-- An affirmative reply will lead to UX Designer. -->
+	        <text>Yes</text>
+	        <postback>Yes</postback>
+	    </reply>
+	    <reply>
+	        <!-- A negative reply will lead to Q4. -->
+	        <text>No</text>
+	        <postback>No</postback>
+	    </reply>
+	    </template>
+	</category>
+	
+	<!-- In this category, the person has just answered yes to enjoying graphics work -->
+	<category>
+	    <pattern>YES</pattern>
+	    <template>Fantastic!
+	    <think><set name="topic">UXDesigner</set></think>
+	    <br></br>
+	    <delay>3</delay>
+	    Based on your answers, your ideal career is that of a UX Designer!
+	    <image>https://www.wgu.edu/blog/2023/06/the-difference-between-ux-ui/_jcr_content/root/container/imageandtext.coreimg.85.800.jpeg/1701987573052/digital-experience.jpeg</image>
+	    </template>
+	</category>
+	
+	<!-- In this category, the person does not enjoy working with graphics-->
+	<category>
+	    <pattern>No</pattern>
+	    <template>No worries!  We'll keep looking.
+	    <think><set name="topic">Q4</set></think>
+	    <delay>2</delay>
+	    Question 3: Do you find the field of cybersecurity exciting?
+	    <reply>
+	        <!-- An affirmative reply will lead to Information Security Analyst. -->
+	        <text>Yes</text>
+	        <postback>Yes</postback>
+	    </reply>
+	    <reply>
+	        <!-- A negative reply will lead to IT Project Manager -->
+	        <text>No</text>
+	        <postback>No</postback>
+	    </reply>
+	    </template>
+	</category>    
+	</topic> <!-- End of Q3 topic -->
+	
+	<topic name="Q4"> <!-- This topic is on the cybersecurity question-->
+	<!-- This category is to keep the student in the flow of the logic of Q4 -->
+	<category>
+	    <pattern>*</pattern>
+	    <template>
+	        Question 3: Do you find the field of cybersecurity exciting?
+	        <reply>
+	        <!-- An affirmative reply will lead to Information Security Analyst. -->
+	        <text>Yes</text>
+	        <postback>Yes</postback>
+	    </reply>
+	    <reply>
+	        <!-- A negative reply will lead to IT Project Manager. -->
+	        <text>No</text>
+	        <postback>No</postback>
+	    </reply>
+	    </template>
+	</category>
+	
+	<!-- In this category, the person has just answered yes to enjoying graphics work -->
+	<category>
+	    <pattern>YES</pattern>
+	    <template>Stupendous!
+	    <think><set name="topic">InfoSecAnalyst</set></think>
+	    <br></br>
+	    <delay>3</delay>
+	    Based on your answers, your ideal career is that of an Information Security Analyst!
+	    <image>https://www.wgu.edu/blog/2018/04/3-cybersecurity-career-myths-busted/_jcr_content/root/container/twocolumncontrol/right-col-par/imageandtext.coreimg.85.800.jpeg/1699492202929/cybersecurity-career-myths-busted.jpeg</image>
+	    </template>
+	</category>
+	
+	<!-- In this category, the person does not enjoy working with graphics-->
+	<category>
+	    <pattern>No</pattern>
+	    <template>That's alright.  We're on the right track!  Just a moment.
+	    <think><set name="topic">ITProjectManager</set></think>
+	    <delay>3</delay>
+	    Baed on your answers, you would be a perfect fit for an IT Project Manager!
+        <image>https://www.wgu.edu/blog/2019/10/6-it-management-roles-for-determined-professionals/_jcr_content/root/container/imageandtext.coreimg.85.800.jpeg/1571074070413/6-it-management-roles.jpeg</image>
+	    </template>
+	</category>    
+	</topic> <!-- End of Q4 topic -->
 
 	
 </aiml>
