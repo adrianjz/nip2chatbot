@@ -117,7 +117,7 @@
 	    <br></br>
 	    <delay>3</delay>
 	    Based on your answers, your ideal career is that of a Data Scientist!
-	    <image>https://www.wgu.edu/online-it-degrees/data-analytics-masters-program/_jcr_content/root/container/columncontrol/column-1/image_1704038250_cop.coreimg.85.800.png/1712173894152/msda-infographic.png</image>
+	    <image>https://www.wgu.edu/career-guide/information-technology/data-scientist-career/_jcr_content/root/columncontrol_179318_806819045/column-1/container_765818955/image_copy_copy.coreimg.85.800.jpeg/1730779885134/what-is-data-analytics.jpeg</image>
 	    For more information on this career choice, please follow the link below:
 	    <link>
 	        <text>WGU Data Scientist</text>
@@ -179,6 +179,14 @@
 	    <delay>3</delay>
 	    Based on your answers, your ideal career is that of a UX Designer!
 	    <image>https://www.wgu.edu/blog/2023/06/the-difference-between-ux-ui/_jcr_content/root/container/imageandtext.coreimg.85.800.jpeg/1701987573052/digital-experience.jpeg</image>
+	    For more information on this career choice, please follow the link below:
+	    <link>
+	        <text>WGU UX Designer</text>
+	        <url>https://www.wgu.edu/career-guide/information-technology/ux-designer-career.html</url>
+	    </link>
+	    <br></br>
+	    You can type 'Careers' again to retake this quiz.  Have a great day!
+	    <set name="topic"></set>
 	    </template>
 	</category>
 	
@@ -231,6 +239,14 @@
 	    <delay>3</delay>
 	    Based on your answers, your ideal career is that of an Information Security Analyst!
 	    <image>https://www.wgu.edu/blog/2018/04/3-cybersecurity-career-myths-busted/_jcr_content/root/container/twocolumncontrol/right-col-par/imageandtext.coreimg.85.800.jpeg/1699492202929/cybersecurity-career-myths-busted.jpeg</image>
+	    For more information on this career choice, please follow the link below:
+	    <link>
+	        <text>WGU Information Security Analyst</text>
+	        <url>https://www.wgu.edu/career-guide/information-technology/information-security-analyst-career.html</url>
+	    </link>
+	    <br></br>
+	    You can type 'Careers' again to retake this quiz.  Have a great day!
+	    <set name="topic"></set>
 	    </template>
 	</category>
 	
