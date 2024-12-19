@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
-    
+    <!-- (c) Adrián Jiménez -->
     <!-- This category is the starting point of the chatbot. -->
     <!-- There are five careers available for the chatbot to suggest. -->
     <!-- 1: Software developer -->
     <!-- 2: UX Designer -->
     <!-- 3: Data Scientist -->
     <!-- 4: Information Security Analyst -->
-    <!-- 5: IT Project Manager -->
+    <!-- 5: IT Manager -->
     <!-- A student will answer at most three questions before receiving a career. -->
 	<category>
 	    <pattern>CAREERS</pattern>
@@ -254,13 +254,19 @@
 	<category>
 	    <pattern>No</pattern>
 	    <template>That's alright.  We're on the right track!  Just a moment.
-	    <think><set name="topic">ITProjectManager</set></think>
+	    <think><set name="topic">ITManager</set></think>
 	    <delay>3</delay>
-	    Baed on your answers, you would be a perfect fit for an IT Project Manager!
+	    Baed on your answers, you would be a perfect fit for an IT Manager!
         <image>https://www.wgu.edu/blog/2019/10/6-it-management-roles-for-determined-professionals/_jcr_content/root/container/imageandtext.coreimg.85.800.jpeg/1571074070413/6-it-management-roles.jpeg</image>
+	    For more information on this career choice, please follow the link below:
+	    <link>
+	        <text>WGU IT Manager</text>
+	        <url>https://www.wgu.edu/career-guide/information-technology/it-manager-career.html</url>
+	    </link>
+	    <br></br>
+	    You can type 'Careers' again to retake this quiz.  Have a great day!
+	    <set name="topic"></set>
 	    </template>
 	</category>    
 	</topic> <!-- End of Q4 topic -->
-
-	
 </aiml>
